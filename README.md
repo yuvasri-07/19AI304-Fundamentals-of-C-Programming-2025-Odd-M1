@@ -26,7 +26,27 @@ To build a C program that prints integer, float,character, and string literals o
 ### Step 4: 
    Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int a = 25;
+    float b = 3.14;
+    char c = 'A';
+    char str[] = "Hello C";
+    printf("Integer literal value: %d\n", a);
+    printf("Float literal value: %.2f\n", b);
+    printf("Character literal value: %c\n", c);
+    printf("String literal value: %s\n", str);
+    return 0;
+}
+
 # Output:
+Integer literal value: 25
+Float literal value: 3.14
+Character literal value: A
+String literal value: Hello C
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -57,7 +77,21 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 6:  
   Stop
 # Program:
+#include <stdio.h>
+#define PI 3.14
+
+int main()
+{
+    const int MAX = 100;
+    printf("Value of macro constant PI = %.2f\n", PI);
+    printf("Value of constant variable MAX = %d\n", MAX);
+    return 0;
+}
+
 # Output:
+Value of macro constant PI = 3.14
+Value of constant variable MAX = 100
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -81,7 +115,27 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 5:    
    Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;           
+    float b = 12.5f;     
+    double c = 123.456;  
+    char d = 'C';          
+    printf("Integer value = %d\n", a);
+    printf("Float value = %.2f\n", b);
+    printf("Double value = %.3lf\n", c);
+    printf("Character value = %c\n", d);
+    return 0;
+}
+
 # Output:
+Integer value = 10
+Float value = 12.50
+Double value = 123.456
+Character value = C
+
 # Result: 
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd
@@ -120,7 +174,50 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("\nArithmetic Operations:\n");
+    printf("Addition (a + b) = %d\n", a + b);
+    printf("Subtraction (a - b) = %d\n", a - b);
+    printf("Multiplication (a * b) = %d\n", a * b);
+    if (b != 0)
+    {
+        printf("Division (a / b) = %d\n", a / b);
+        printf("Remainder (a %% b) = %d\n", a % b);
+    }
+    else
+    {
+        printf("Division and Remainder not possible (division by zero)\n");
+    }
+    printf("Bitwise Operations:\n");
+    printf("AND (a & b) = %d\n", a & b);
+    printf("OR (a | b) = %d\n", a | b);
+    printf("XOR (a ^ b) = %d\n", a ^ b);
+    printf("Left Shift (a << 1) = %d\n", a << 1);
+    printf("Right Shift (a >> 1) = %d\n", a >> 1);
+    printf("NOT (~a) = %d\n", ~a);
+    return 0;
+}
+
 # Output:
+Arithmetic Operations:
+Addition (a + b) = 13
+Subtraction (a - b) = 7
+Multiplication (a * b) = 30
+Division (a / b) = 3
+Remainder (a % b) = 1
+
+Bitwise Operations:
+AND (a & b) = 2
+OR (a | b) = 11
+XOR (a ^ b) = 9
+Left Shift (a << 1) = 20
+Right Shift (a >> 1) = 5
+NOT (~a) = -11
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -165,7 +262,32 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+int main()
+{
+    char ch;
+    scanf(" %c", &ch);
+    (ch >= '0' && ch <= '9') ?
+        printf("'%c' is a Digit\n", ch) :
+    ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) ?
+        ((ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ||
+          ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') ?
+            printf("'%c' is a Vowel\n", ch) :
+            printf("'%c' is a Consonant\n", ch)) :
+        printf("'%c' is a Special Symbol\n", ch);
+    return 0;
+}
+
 # Output:
+ a
+ 'a' is a Vowel
+ 7
+ '7' is a Digit
+#
+'#' is a Special Symbol
+
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
